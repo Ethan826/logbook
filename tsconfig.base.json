@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@logbook/date": ["packages/date/src/index.ts"],
       "@logbook/fp": ["packages/fp/src/index.ts"]
     }
   },
