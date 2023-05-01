@@ -2,7 +2,7 @@ import { LocalDate } from "@js-joda/core";
 import { E, pipe } from "@logbook/fp";
 import * as fc from "fast-check";
 
-import { LocalDateFromIsoString } from "./date";
+import { LocalDateFromIsoString } from "./local-date-from-iso-string";
 
 describe("LocalDateFromIsoString", () => {
   it("decodes a valid date", () => {

@@ -1,12 +1,18 @@
 export * as A from "fp-ts/Array";
 export * as E from "fp-ts/Either";
+export * as Eq from "fp-ts/Eq";
 export { flow, hole, identity, pipe } from "fp-ts/function";
 export * as IO from "fp-ts/IO";
 export * as IOE from "fp-ts/IOEither";
+export * as MAG from "fp-ts/Magma";
+export * as MD from "fp-ts/Monoid";
+export * as N from "fp-ts/number";
 export * as O from "fp-ts/Option";
 export * as RTE from "fp-ts/ReaderTaskEither";
 export * as RA from "fp-ts/ReadonlyArray";
 export * as RNEA from "fp-ts/ReadonlyNonEmptyArray";
+export * as SG from "fp-ts/Semigroup";
+export * as SR from "fp-ts/Semiring";
 export * as T from "fp-ts/Task";
 export * as TE from "fp-ts/TaskEither";
 export * as t from "io-ts";

@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@logbook/date": ["packages/date/src/index.ts"],
-      "@logbook/fp": ["packages/fp/src/index.ts"]
+      "@logbook/fp": ["packages/fp/src/index.ts"],
+      "@logbook/time": ["packages/time/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

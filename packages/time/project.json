@@ -1,17 +1,17 @@
 {
-  "name": "date",
+  "name": "time",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/date/src",
+  "sourceRoot": "packages/time/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/date",
-        "main": "packages/date/src/index.ts",
-        "tsConfig": "packages/date/tsconfig.lib.json",
-        "assets": ["packages/date/*.md"]
+        "outputPath": "dist/packages/time",
+        "main": "packages/time/src/index.ts",
+        "tsConfig": "packages/time/tsconfig.lib.json",
+        "assets": ["packages/time/*.md"]
       }
     },
     "publish": {
@@ -22,14 +22,14 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/date/**/*.ts"]
+        "lintFilePatterns": ["packages/time/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "packages/date/jest.config.ts",
+        "jestConfig": "packages/time/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
