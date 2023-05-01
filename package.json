@@ -7,11 +7,15 @@
   "dependencies": {
     "@js-joda/core": "^5.5.3",
     "axios": "^1.0.0",
+    "fastify": "^4.17.0",
     "fp-ts": "^2.14.0",
     "io-ts": "^2.2.20",
+    "io-ts-reporters": "^2.0.1",
     "io-ts-types": "^0.5.19",
     "monocle-ts": "^2.3.13",
     "newtype-ts": "^0.3.5",
+    "pg": "^8.10.0",
+    "pino": "^8.11.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
@@ -24,6 +28,7 @@
     "@nx/workspace": "16.0.1",
     "@types/jest": "^29.4.0",
     "@types/node": "~18.7.1",
+    "@types/pg": "^8.6.6",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
     "esbuild": "^0.17.17",
