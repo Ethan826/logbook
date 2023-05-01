@@ -1,11 +1,24 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nx"],
+  "plugins": ["@nx", "import", "simple-import-sort"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
+        "@typescript-eslint/consistent-type-imports": 2,
+        "import/first": 2,
+        "import/named": 0,
+        "import/newline-after-import": 2,
+        "import/no-duplicates": 2,
+        "import/no-unresolved": 0,
+        "linebreak-style": ["error", "unix"],
+        "no-warning-comments": 1,
+        "simple-import-sort/exports": 2,
+        "simple-import-sort/imports": 2,
+        "curly": ["error", "multi-line", "consistent"],
+        "quotes": ["error", "double", { "avoidEscape": true }],
+        "semi": ["error", "always"],
         "@nx/enforce-module-boundaries": [
           "error",
           {
