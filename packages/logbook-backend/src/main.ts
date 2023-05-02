@@ -8,6 +8,13 @@ import { DomainError } from "./core/domain-error";
 import { PinoLoggingProvider } from "./providers/pino-logging-provider";
 import { PostgresLogbookProvider } from "./providers/postgres-logbook-provider";
 
+const postgresPool = new Pool({
+  host: "localhost",
+  database: "postgres",
+  user: "postgres",
+  password: "mysecretpassword",
+});
+
 const fastify = Fastify({ logger: true });
 
 class ArgumentError extends DomainError {
@@ -22,12 +29,7 @@ fastify.post("/aircraft-manufacturer", async (request, reply) => {
     RTE.fromEither,
     RTE.flatMap(PostgresLogbookProvider.createAircraftManufacturer)
   )({
-    postgresPool: new Pool({
-      host: "localhost",
-      database: "postgres",
-      user: "postgres",
-      password: "mysecretpassword",
-    }),
+    postgresPool,
     loggingService: PinoLoggingProvider,
   })();
 

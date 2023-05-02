@@ -14,4 +14,8 @@ export type LogbookService<R, A> = {
   createAircraftManufacturer: (
     manufacturer: AircraftManufacturer
   ) => RTE.ReaderTaskEither<R, LogbookServiceError, O.Option<A>>;
+
+  createAircraftCategory: (
+    category: AircraftManufacturer
+  ) => RTE.ReaderTaskEither<R, LogbookServiceError, O.Option<A>>;
 };
