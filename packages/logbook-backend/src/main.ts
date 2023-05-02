@@ -1,4 +1,4 @@
-import { C, E, flow, pipe, RTE } from "@logbook/fp";
+import { E, pipe, RTE } from "@logbook/fp";
 import Fastify from "fastify";
 import { formatValidationErrors } from "io-ts-reporters";
 import { Pool } from "pg";
@@ -18,7 +18,7 @@ fastify.post("/aircraft-manufacturer", async (request, reply) => {
   const foo = await pipe(
     request.body,
     AircraftManufacturer.decode,
-    E.mapLeft(flow(formatValidationErrors, (e) => new ArgumentError(e))),
+    E.mapLeft(formatValidationErrors),
     RTE.fromEither,
     RTE.flatMap(PostgresLogbookProvider.createAircraftManufacturer)
   )({
@@ -32,11 +32,8 @@ fastify.post("/aircraft-manufacturer", async (request, reply) => {
   })();
 
   E.match(
-    (e) =>
-      e instanceof ArgumentError
-        ? reply.code(400).send(e)
-        : reply.code(500).send(e),
-    (d) => reply.status(201).send(d)
+    () => reply.send(foo),
+    (d) => reply.send()
   )(foo);
 });
 

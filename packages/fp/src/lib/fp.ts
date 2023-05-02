@@ -10,6 +10,7 @@ export * as MAG from "fp-ts/Magma";
 export * as MD from "fp-ts/Monoid";
 export * as N from "fp-ts/number";
 export * as O from "fp-ts/Option";
+export * as R from "fp-ts/Reader";
 export * as RT from "fp-ts/ReaderTask";
 export * as RTE from "fp-ts/ReaderTaskEither";
 export * as RA from "fp-ts/ReadonlyArray";
