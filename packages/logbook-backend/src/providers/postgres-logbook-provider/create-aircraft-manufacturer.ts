@@ -1,4 +1,4 @@
-import { E, identity, pipe, R, RT, RTE, t, TE } from "@logbook/fp";
+import { E, identity, pipe, R, RT, RTE, TE } from "@logbook/fp";
 import type { Pool, QueryResult } from "pg";
 
 import type { AircraftManufacturer } from "../../core/aircraft-manufacturer";
